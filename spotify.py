@@ -1,10 +1,11 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from data_billboard import Top_100_title
+import os
 
-SPOTIPY_CLIENT_ID='ae8e482182bb4ef7aa4f2dd47406924f'
-SPOTIPY_CLIENT_SECRET='03ed88730e3c44798e6e03a1bf2a57fd'
-REDIRECT_URL = "http://example.com"
+SPOTIPY_CLIENT_ID = os.environ.get("SPOTIPY_CLIENT_ID_value")
+SPOTIPY_CLIENT_SECRET = os.environ.get("SPOTIPY_CLIENT_SECRET_value")
+REDIRECT_URL = os.environ.get("REDIRECT_URL_value")
 
 
 class Spotify_data:
